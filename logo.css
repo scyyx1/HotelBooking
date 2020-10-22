@@ -1,0 +1,26 @@
+.logo{
+    height:80px;
+    background-color: #02059c;
+    background-size:cover;
+    margin:-25px -10px 10px -10px;
+}
+.logo h1{
+    position:absolute;
+    color:white;
+    left:15%;
+    font-size: 40px;
+}
+.logo h4{
+    position:absolute;
+    right:15%;
+    color:white;
+}
+.logout{
+    position: absolute;
+    right:15%;
+    top:40px;
+
+}
+.logout button{
+    cursor:pointer;
+}

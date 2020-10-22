@@ -1,0 +1,12 @@
+@import "form.css";
+.box{
+    height: 300px;
+}
+.form-item select{
+    width:100%;
+    height:42px;  
+}
+.GoBack{
+    position: absolute;
+    bottom:0px;
+}

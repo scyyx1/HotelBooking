@@ -1,0 +1,110 @@
+@import "logo.css";
+body{
+    background:url(hotel.jpg) no-repeat center center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+.login{
+    position: absolute;
+    right:25%;
+    top:10px;
+}
+
+.login button{
+    width:100%;
+    height:50px;
+    border: 0; 
+    font-size: 16px; 
+    color: white; 
+    outline: none; 
+    cursor: pointer; 
+    background-color: #02059c;
+    letter-spacing: 0.5em;
+    margin-right:0px;
+}
+.register{
+    position: absolute;
+    right:15%;
+    top:10px;
+}
+.register button{
+    width:100%;
+    height:50px;
+    border: 0; 
+    font-size: 16px; 
+    color: white; 
+    outline: none; 
+    cursor: pointer; 
+    background-color: #02059c;
+    letter-spacing: 0.5em;
+
+}
+.main{
+    position: absolute;
+    width: 100%; 
+    height: 800px;
+}
+.main-middle{
+    height:550px;
+    text-align: center;
+}
+.main-middle h1{
+    position:relative;
+    top:15%;
+    letter-spacing: 2.5em;
+    color:white;
+    font-size:40pt;
+}
+.main-middle h4{
+    position:relative;
+    top:20%;
+    letter-spacing: 0.8em;
+    color:white;
+    font-size:15pt;
+}
+.functionality   {
+    position: relative;
+    top:30%;
+}
+.functionality button{
+    width:360px;
+    height:50px;
+    border: 0; 
+    border-radius: 25px;
+    border: 1px solid black; 
+    font-size: 20pt; 
+    color: black; 
+    outline: none; 
+    cursor: pointer;
+    background-color:white; 
+}
+.roomtype{
+    position: absolute;
+    height:250px;
+    left:15%;
+    right:15%;
+    bottom:0%;
+    border:1px solid #53b7f1;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow:hidden;
+}
+.roomtype p{
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    text-align: center;
+}
+.room-img{
+    width:25%;
+    float:left;
+}
+.room-img img{
+    position:relative;
+    margin-top: 10px;
+    left:10%;
+    width:80%;
+    height:150px;
+}
+.room-img p{
+    position:relative;
+    text-align: center;
+}

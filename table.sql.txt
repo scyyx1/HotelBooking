@@ -1,0 +1,165 @@
+CREATE TABLE staff(
+    staffID INT NOT NULL UNIQUE,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    tele VARCHAR(50) NOT NULL,
+    CONSTRAINT staffID PRIMARY KEY (staffID)
+);
+INSERT INTO staff (staffID, username, password, tele) VALUES(1, 'admin', 'admin', '0123456');
+
+CREATE TABLE guests(
+    username VARCHAR(100) NOT NULL,
+    roomNo INT(4) NOT NULL,
+    roomInfo VARCHAR(50) NOT NULL,
+    startdate DATE NOT NULL,
+    enddate DATE NOT NULL,
+    CONSTRAINT guestPK PRIMARY KEY(roomNo, startdate, enddate),
+    CONSTRAINT guestFK FOREIGN KEY (username) REFERENCES users (username),
+    CONSTRAINT guestFK2 FOREIGN KEY (roomNo) REFERENCES rooms (roomNo)
+);
+
+CREATE TABLE users(
+	username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    realname VARCHAR(100) NOT NULL,
+    passport VARCHAR(100) NOT NULL UNIQUE,
+    tele VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    CONSTRAINT usersPK PRIMARY KEY (username)
+);
+
+CREATE TABLE rooms(
+    roomNo INT(4) NOT NULL UNIQUE,
+    roomInfo VARCHAR(50) NOT NULL,
+    CONSTRAINT roomsPK PRIMARY KEY (roomNo)
+);
+INSERT INTO rooms (roomNo, roomInfo) VALUES (101, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (102, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (103, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (104, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (105, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (106, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (107, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (108, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (109, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (110, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (111, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (112, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (113, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (201, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (202, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (203, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (204, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (205, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (206, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (207, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (208, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (209, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (210, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (211, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (212, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (213, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (301, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (302, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (303, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (304, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (305, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (306, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (307, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (308, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (309, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (310, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (311, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (312, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (313, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (401, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (402, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (403, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (404, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (405, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (406, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (407, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (408, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (409, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (410, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (411, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (412, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (413, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (501, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (502, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (503, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (504, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (505, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (506, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (507, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (508, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (509, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (510, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (511, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (512, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (513, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (601, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (602, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (603, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (604, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (605, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (606, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (607, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (608, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (609, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (610, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (611, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (612, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (613, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (701, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (702, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (703, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (704, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (705, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (706, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (707, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (708, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (709, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (710, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (711, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (712, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (713, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (801, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (802, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (803, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (804, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (805, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (806, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (807, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (808, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (809, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (810, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (811, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (812, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (813, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (901, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (902, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (903, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (904, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (905, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (906, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (907, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (908, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (909, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (910, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (911, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (912, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (913, 'VIP bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1001, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1002, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1003, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1004, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1005, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1006, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1007, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1008, 'Small single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1009, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1010, 'Large single bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1011, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1012, 'Large double bedroom');
+INSERT INTO rooms (roomNo, roomInfo) VALUES (1013, 'VIP bedroom');
